@@ -1,11 +1,11 @@
 {
   "name": "rost-web",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
-  "main": "pkg/main.js",
+  "main": "web/main.js",
   "scripts": {
     "watch": "tsc --watch",
-    "compile": "wasm-pack build --target web --out-dir ./web/pkg && tsc"
+    "compile": "wasm-pack build --target web --out-dir web/pkg && tsc"
   },
   "author": "RubixDev",
   "license": "GPL-2.0-only",

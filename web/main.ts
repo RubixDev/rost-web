@@ -5,6 +5,10 @@ const body = document.getElementById('body') as HTMLDivElement
 const history = document.getElementById('body__history') as HTMLDivElement
 const input = document.getElementById('body__input') as HTMLInputElement
 
+const minButton = document.getElementById('titlebar__buttons__minimize') as HTMLInputElement
+const maxButton = document.getElementById('titlebar__buttons__maximize') as HTMLInputElement
+const closeButton = document.getElementById('titlebar__buttons__close') as HTMLInputElement
+
 async function setup() {
     await init()
     input.addEventListener('keyup', event => {
@@ -27,6 +31,22 @@ async function setup() {
     terminal.addEventListener('mouseup', () => {
         if (window.getSelection()?.toString() !== "") return
         input.focus()
+    })
+
+    minButton.addEventListener('click', () => {
+        terminal.className = 'minimized'
+        setTimeout(() => {
+            terminal.className = ''
+        }, 3000)
+    })
+    maxButton.addEventListener('click', () => {
+        if (terminal.className.includes('maximized'))
+            terminal.className = ''
+        else
+            terminal.className = 'maximized'
+    })
+    closeButton.addEventListener('click', () => {
+        history.innerHTML = ''
     })
 }
 

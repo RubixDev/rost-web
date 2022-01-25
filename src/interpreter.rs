@@ -13,7 +13,7 @@ impl Interpreter {
     }
 
     pub fn run(&self) -> String {
-        return format!("{}", self.visit_expression(&self.start_node.clone()));
+        return self.visit_expression(&self.start_node.clone()).normalize().to_string();
     }
 
     // --------------------------------------

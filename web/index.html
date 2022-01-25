@@ -4,11 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
+    <link rel="shortcut icon" href="assets/icon.png" type="image/x-icon">
+    <title>rost</title>
 
-    <script type="module" src="main.js"></script>
+    <script defer type="module" src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    Hi
+    <div id="terminal">
+        <div id="titlebar">
+            <img src="assets/icon.png" alt="" id="titlebar__icon">
+            <div id="titlebar__text">rost</div>
+            <div id="titlebar__buttons">
+                <div class="title-btn" id="titlebar__buttons__minimize"></div>
+                <div class="title-btn" id="titlebar__buttons__maximize"></div>
+                <div class="title-btn" id="titlebar__buttons__close"></div>
+            </div>
+        </div>
+        <div id="body">
+            <div id="body__history"></div>
+            <span id="body__prompt">&gt </span>
+            <input type="text" name="body__input" id="body__input">
+        </div>
+    </div>
 </body>
 </html>

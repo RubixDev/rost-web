@@ -1,5 +1,11 @@
 {
     "cSpell.words": [
         "bindgen"
+    ],
+    "liveServer.settings.ignoreFiles": [
+        ".vscode/**",
+        "target/**",
+        "src/**",
+        "**/*.ts"
     ]
 }

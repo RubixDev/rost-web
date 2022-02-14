@@ -10,5 +10,5 @@ license = "GPL-2.0-only"
 crate-type = ["cdylib"]
 
 [dependencies]
-rust_decimal = { version = "1.20.0", features = ["maths"] }
+rost = { git = "https://github.com/RubixDev/rost" }
 wasm-bindgen = "0.2.79"

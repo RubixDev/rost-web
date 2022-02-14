@@ -1,15 +1,7 @@
-#[macro_use]
-mod error;
-mod lexer;
-mod tokens;
-mod parser;
-mod nodes;
-mod interpreter;
-
 use wasm_bindgen::prelude::*;
-use lexer::Lexer;
-use parser::Parser;
-use interpreter::Interpreter;
+use rost::lexer::Lexer;
+use rost::parser::Parser;
+use rost::interpreter::Interpreter;
 
 #[wasm_bindgen]
 pub fn run(code: String) -> String {
@@ -30,6 +22,6 @@ pub fn run(code: String) -> String {
     };
 
     let interpreter = Interpreter::new(nodes);
-    let out = interpreter.run();
-    return format!("{}", out);
+    let res = interpreter.run();
+    return format!("{}", res);
 }

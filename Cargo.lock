@@ -10,9 +10,9 @@ checksum = "8da52d66c7071e2e3fa2a1e5c6d088fec47b593032b254f5e980de8ea54454d6"
 
 [[package]]
 name = "autocfg"
-version = "1.0.1"
+version = "1.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "cdb031dd78e28731d87d56cc8ffef4a8f36ca26c38fe2de700543e627f8a464a"
+checksum = "d468802bab17cbc0cc575e9b053f41e72aa36bfa6b7f55e3529ffa43161b97fa"
 
 [[package]]
 name = "bumpalo"
@@ -69,18 +69,26 @@ dependencies = [
 ]
 
 [[package]]
+name = "rost"
+version = "0.1.0"
+source = "git+https://github.com/RubixDev/rost#df30fed3de8bfa3a600b3183032e90b0db82696a"
+dependencies = [
+ "rust_decimal",
+]
+
+[[package]]
 name = "rost-web"
 version = "0.1.0"
 dependencies = [
- "rust_decimal",
+ "rost",
  "wasm-bindgen",
 ]
 
 [[package]]
 name = "rust_decimal"
-version = "1.20.0"
+version = "1.21.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e0593ce4677e3800ddafb3de917e8397b1348e06e688128ade722d88fbe11ebf"
+checksum = "4214023b1223d02a4aad9f0bb9828317634a56530870a2eaf7200a99c0c10f68"
 dependencies = [
  "arrayvec",
  "num-traits",
@@ -89,9 +97,9 @@ dependencies = [
 
 [[package]]
 name = "serde"
-version = "1.0.135"
+version = "1.0.136"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2cf9235533494ea2ddcdb794665461814781c53f19d87b76e571a1c35acbad2b"
+checksum = "ce31e24b01e1e524df96f1c2fdd054405f8d7376249a5110886fb4b658484789"
 
 [[package]]
 name = "syn"
